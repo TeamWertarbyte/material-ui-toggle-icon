@@ -7,7 +7,7 @@ export function clipPathSupported () {
   }
 
   const base = 'clipPath'
-  const prefixes = ['webkit', 'moz', 'ms', 'o']
+  const prefixes = ['Webkit']
   const properties = [base, ...prefixes.map((prefix) => prefix + base.charAt(0).toUpperCase() + base.slice(1))]
   const testElement = document.createElement('testelement')
   const attribute = 'polygon(50% 0%, 0% 100%, 100% 100%)'
