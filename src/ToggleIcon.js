@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { clipPathSupported } from './util'
 
 const getStyles = (props) => ({
   root: {
@@ -9,8 +10,9 @@ const getStyles = (props) => ({
     display: 'inline-block'
   },
   offIcon: {
-    transition: '550ms cubic-bezier(0.4, 0.0, 0.2, 1)',
+    transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)',
     clipPath: props.on ? 'polygon(0% 0%, 0% 0%, 0% 0%)' : 'polygon(0% 200%, 0% 0%, 200% 0%)',
+    visibility: !props.on || clipPathSupported() ? 'visible' : 'hidden',
     width: '100%',
     height: '100%',
     position: 'absolute',
@@ -18,8 +20,9 @@ const getStyles = (props) => ({
     top: 0
   },
   onIcon: {
-    transition: '550ms cubic-bezier(0.4, 0.0, 0.2, 1)',
+    transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)',
     clipPath: props.on ? 'polygon(100% -100%, 100% 100%, -100% 100%)' : 'polygon(100% 100%, 100% 100%, 100% 100%)',
+    visibility: props.on || clipPathSupported() ? 'visible' : 'hidden',
     width: '100%',
     height: '100%',
     position: 'absolute',
