@@ -36,6 +36,9 @@ const getStyles = (props) => ({
   }
 })
 
+/**
+ * An animated toggle icon.
+ */
 export default function ToggleIcon (props) {
   const {
     color,
@@ -66,10 +69,28 @@ export default function ToggleIcon (props) {
 }
 
 ToggleIcon.propTypes = {
+  /**
+   * This is the fill color of the svg icon. If not specified, this component will default to muiTheme.palette.textColor.
+   */
   color: PropTypes.string,
+  /**
+   * This is the icon color when the mouse hovers over the icon.
+   */
   hoverColor: PropTypes.string,
+  /**
+   * The icon to be displayed if the `on` prop is set to `false`.
+   */
   offIcon: PropTypes.element.isRequired,
+  /**
+   * The icon to be displayed if the `on` prop is set to `true`.
+   */
   onIcon: PropTypes.element.isRequired,
+  /**
+   * Controls whether the `onIcon` or the `offIcon` is displayed.
+   */
   on: PropTypes.bool.isRequired,
+  /**
+   * Override the inline-styles of the root element.
+   */
   style: PropTypes.object
 }

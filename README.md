@@ -30,6 +30,18 @@ import VisibilityOff from 'material-ui/svg-icons/action/visibility-off'
 </IconButton>
 ```
 
+## Properties
+|Name|Type|Default|Description|
+|---|---|---|---|
+|color|`string`||This is the fill color of the svg icon. If not specified, this component will default to muiTheme.palette.textColor.|
+|hoverColor|`string`||This is the icon color when the mouse hovers over the icon.|
+|offIcon*|`element`||The icon to be displayed if the `on` prop is set to `false`.|
+|onIcon*|`element`||The icon to be displayed if the `on` prop is set to `true`.|
+|on*|`bool`||Controls whether the `onIcon` or the `offIcon` is displayed.|
+|style|`object`||Override the inline-styles of the root element.|
+
+\* required property
+
 ## License
 The files included in this repository are licensed under the MIT license.
 
