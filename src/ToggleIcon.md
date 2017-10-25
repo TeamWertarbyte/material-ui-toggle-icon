@@ -4,8 +4,8 @@ Below is an interactive example where a toggle icon is used inside an `IconButto
 
 ```
 const { IconButton } = require('material-ui');
-const Visibility = require('material-ui/svg-icons/action/visibility').default
-const VisibilityOff = require('material-ui/svg-icons/action/visibility-off').default
+const Visibility = require('material-ui-icons/Visibility').default;
+const VisibilityOff = require('material-ui-icons/VisibilityOff').default;
 
 inititalState = { on: false };
 
@@ -20,44 +20,33 @@ inititalState = { on: false };
 </IconButton>
 ```
 
-This component aims to be compatible with Material-UI's icon components. It should work wherever `SvgIcon` and `FontIcon` are supported. It also supports the same props.
+This component aims to be compatible with Material-UI's icon components. It should work wherever `SvgIcon` and `Icon` are supported.
 
 ```
-const { RaisedButton } = require('material-ui');
-const Visibility = require('material-ui/svg-icons/action/visibility').default;
-const VisibilityOff = require('material-ui/svg-icons/action/visibility-off').default;
+const { IconButton } = require('material-ui');
+const Visibility = require('material-ui-icons/Visibility').default;
+const VisibilityOff = require('material-ui-icons/VisibilityOff').default;
 
 <div>
   <div>
-    Raised button:
-    <RaisedButton
-      icon={<ToggleIcon
+    Icon button:
+    <IconButton color="primary">
+      <ToggleIcon
         on={true}
         onIcon={<Visibility />}
         offIcon={<VisibilityOff />}
-      />}
-    />
+      />
+    </IconButton>
   </div>
   <div>
-  Disabled raises button:
-  <RaisedButton
-    icon={<ToggleIcon
-      on={true}
-      onIcon={<Visibility />}
-      offIcon={<VisibilityOff />}
-    />}
-    disabled
-  />
-  </div>
-  <div>
-    With `color` and `hoverColor`:
-    <ToggleIcon
-      on={true}
-      onIcon={<Visibility />}
-      offIcon={<VisibilityOff />}
-      color='orange'
-      hoverColor='red'
-    />
+    Disabled icon button:
+    <IconButton color="primary" disabled>
+      <ToggleIcon
+        on={true}
+        onIcon={<Visibility />}
+        offIcon={<VisibilityOff />}
+      />
+    </IconButton>
   </div>
 </div>
 ```
