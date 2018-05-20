@@ -13,8 +13,7 @@ const styles = {
     width: 24,
     height: 24,
     position: 'relative',
-    display: 'inline-block',
-    transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)'
+    display: 'inline-block'
   },
   offIcon: {
     transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)',
