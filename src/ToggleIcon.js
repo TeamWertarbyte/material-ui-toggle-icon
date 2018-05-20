@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import { clipPathSupported } from './util'
 
 const clipPath = (value) => ({
@@ -13,7 +13,8 @@ const styles = {
     width: 24,
     height: 24,
     position: 'relative',
-    display: 'inline-block'
+    display: 'inline-block',
+    transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)'
   },
   offIcon: {
     transition: 'clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1), -webkit-clip-path 550ms cubic-bezier(0.4, 0.0, 0.2, 1)',

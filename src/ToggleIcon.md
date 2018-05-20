@@ -3,9 +3,9 @@ The toggle icon can be used to toggle between two icons. When changing the `stat
 Below is an interactive example where a toggle icon is used inside an `IconButton`.
 
 ```
-const { IconButton } = require('material-ui');
-const Visibility = require('material-ui-icons/Visibility').default;
-const VisibilityOff = require('material-ui-icons/VisibilityOff').default;
+const IconButton = require('@material-ui/core/IconButton').default;
+const Visibility = require('@material-ui/icons/Visibility').default;
+const VisibilityOff = require('@material-ui/icons/VisibilityOff').default;
 
 inititalState = { on: false };
 
@@ -23,9 +23,9 @@ inititalState = { on: false };
 This component aims to be compatible with Material-UI's icon components. It should work wherever `SvgIcon` and `Icon` are supported.
 
 ```
-const { IconButton } = require('material-ui');
-const Visibility = require('material-ui-icons/Visibility').default;
-const VisibilityOff = require('material-ui-icons/VisibilityOff').default;
+const IconButton = require('@material-ui/core/IconButton').default;
+const Visibility = require('@material-ui/icons/Visibility').default;
+const VisibilityOff = require('@material-ui/icons/VisibilityOff').default;
 
 <div>
   <div>
