@@ -5,6 +5,10 @@ export function clipPathSupported () {
   if (_clipPathSupported != null) {
     return _clipPathSupported
   }
+  if (typeof document === 'undefined') {
+    _clipPathSupported = false
+    return false
+  }
 
   const base = 'clipPath'
   const prefixes = ['Webkit']
