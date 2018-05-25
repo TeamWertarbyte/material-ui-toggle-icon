@@ -1,6 +1,6 @@
 {
   "name": "material-ui-toggle-icon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An animated toggle icon using Material-UI.",
   "main": "lib/ToggleIcon.js",
   "scripts": {
