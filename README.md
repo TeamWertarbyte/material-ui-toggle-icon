@@ -19,15 +19,21 @@ import { IconButton } from 'material-ui'
 import Visibility from 'material-ui/svg-icons/action/visibility'
 import VisibilityOff from 'material-ui/svg-icons/action/visibility-off'
 
-<IconButton
-  onClick={() => setState({ on: !state.on })}
->
-  <ToggleIcon
-    on={state.on}
-    onIcon={<Visibility />}
-    offIcon={<VisibilityOff />}
-  />
-</IconButton>
+export default class ToggleIconButton extends Component {
+  state = { on: false }
+
+  render() {
+    <IconButton
+     onClick={() => setState({ on: !state.on })}
+    >
+      <ToggleIcon
+      on={this.state.on}
+      onIcon={<Visibility />}
+      offIcon={<VisibilityOff />}
+    />
+  </IconButton>
+  }
+}
 ```
 
 ## Properties
