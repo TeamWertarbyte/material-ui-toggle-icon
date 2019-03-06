@@ -15,23 +15,23 @@ The component takes two icons and a boolean that tells it whether to display the
 
 ```jsx
 import ToggleIcon from 'material-ui-toggle-icon'
-import { IconButton } from 'material-ui'
-import Visibility from 'material-ui/svg-icons/action/visibility'
-import VisibilityOff from 'material-ui/svg-icons/action/visibility-off'
+import IconButton from '@material-ui/core/IconButton'
+import Visibility from '@material-ui/icons/Visibility'
+import VisibilityOff from '@material-ui/icons/VisibilityOff'
 
 export default class ToggleIconButton extends Component {
   state = { on: false }
 
   render() {
     <IconButton
-     onClick={() => setState({ on: !state.on })}
+      onClick={() => setState(state => ({ on: !state.on }))}
     >
       <ToggleIcon
-      on={this.state.on}
-      onIcon={<Visibility />}
-      offIcon={<VisibilityOff />}
-    />
-  </IconButton>
+        on={state.on}
+        onIcon={<Visibility />}
+        offIcon={<VisibilityOff />}
+      />
+    </IconButton>
   }
 }
 ```
