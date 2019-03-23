@@ -1,11 +1,19 @@
 let _clipPathSupported = null
 
+function isBrowserIeOrEdge () {
+  return document.documentMode || /Edge\//.test(navigator.userAgent)
+}
+
 // Check if clip-path is supported. From http://stackoverflow.com/a/30041538.
 export function clipPathSupported () {
   if (_clipPathSupported != null) {
     return _clipPathSupported
   }
   if (typeof document === 'undefined') {
+    _clipPathSupported = false
+    return false
+  }
+  if (isBrowserIeOrEdge()) {
     _clipPathSupported = false
     return false
   }
