@@ -1,19 +1,11 @@
 let _clipPathSupported = null
 
-function isBrowserIeOrEdge () {
-  return document.documentMode || /Edge\//.test(navigator.userAgent)
-}
-
 // Check if clip-path is supported. From http://stackoverflow.com/a/30041538.
 export function clipPathSupported () {
   if (_clipPathSupported != null) {
     return _clipPathSupported
   }
   if (typeof document === 'undefined') {
-    _clipPathSupported = false
-    return false
-  }
-  if (isBrowserIeOrEdge()) {
     _clipPathSupported = false
     return false
   }
@@ -30,7 +22,7 @@ export function clipPathSupported () {
     if (testElement.style[property] === '') {
       // Second, we need to see what happens when we try to create a CSS shape...
       testElement.style[property] = attribute
-      if (testElement.style[property] !== '') {
+      if (testElement.style[property] !== '' && testElement.style[property] !== 'none') {
         _clipPathSupported = true
         return true
       }
