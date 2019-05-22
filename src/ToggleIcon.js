@@ -39,6 +39,7 @@ const styles = {
 function ToggleIcon (props) {
   const {
     classes,
+    className,
     offIcon,
     onIcon,
     on,
@@ -46,7 +47,7 @@ function ToggleIcon (props) {
   } = props
 
   return (
-    <div className={classes.root} {...other}>
+    <div className={`${classes.root} ${className || ''}`} {...other}>
       {React.cloneElement(offIcon, {
         className: classes.offIcon,
         style: {
