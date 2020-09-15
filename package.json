@@ -3,6 +3,7 @@
   "version": "1.0.6",
   "description": "An animated toggle icon using Material-UI.",
   "main": "lib/ToggleIcon.js",
+  "typings": "lib/ToggleIcon.d.ts",
   "scripts": {
     "test": "standard",
     "build": "rm -rf lib && babel src -d lib",
