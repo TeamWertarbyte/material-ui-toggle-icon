@@ -6,7 +6,7 @@
   "typings": "lib/ToggleIcon.d.ts",
   "scripts": {
     "test": "standard",
-    "build": "rm -rf lib && babel src -d lib",
+    "build": "rm -rf lib && babel src -d lib --copy-files",
     "prepare": "rm -rf lib && babel src -d lib",
     "storybook": "start-storybook -p 6006",
     "deploy-storybook": "storybook-to-ghpages"
